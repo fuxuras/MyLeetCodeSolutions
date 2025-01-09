@@ -25,18 +25,13 @@ public class Question0021 {
                 current = current.next;
             }
         }
-        while (list1!= null){
-            current.next = new ListNode(list1.val);
-            list1 = list1.next;
-            current = current.next;
-        }
-        while (list2!= null){
-            current.next = new ListNode(list2.val);
-            list2 = list2.next;
-            current = current.next;
+        if (list1 == null){
+            current.next = list2;
+        }else{
+            current.next = list1;
         }
         head = head.next;
-        return head
+        return head;
     }
 
 }
